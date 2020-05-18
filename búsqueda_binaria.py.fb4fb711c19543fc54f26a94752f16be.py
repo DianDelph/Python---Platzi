@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 def binary_search(numbers, number_to_find, low, high):
 
@@ -24,7 +25,8 @@ if __name__ == "__main__":
 	result = binary_search(numbers, number_to_find, 0 , len(numbers)- 1)
 
 	if result is True:
-		print(f'El número {number_to_find} si está en la lista')
+		print('El número si está en la lista')
+		f'El número {number_to_find} sí está en la lista'
 	else:
 		print('El número no está en la lista')
 
