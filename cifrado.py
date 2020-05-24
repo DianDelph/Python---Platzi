@@ -79,7 +79,7 @@ def encrypt(message):
 		encrypted_word = ''
 		for letter in word: #por cada letra de la palabra
 			encrypted_word += KEYS[letter] # accesdo a la llave usando la letra y guardo el valor
-		encrypted_message.append(cypher_word) # agrego la palabra al cifrado
+		encrypted_message.append(encrypted_word)  # agrego la palabra al cifrado
 	
 	return ' '.join(encrypted_message) # reconstruyo el string y lo regreso
 
@@ -92,7 +92,7 @@ def decrypt(message):
 		decrypted_word = ''
 
 		for letter in word:
-			for key, value in KEYS.iteritems(): # no podemos saber que value corresponde a qué key, entonces se recorren ambos 
+			for key, value in KEYS.items():  # no podemos saber que value corresponde a qué key, entonces se recorren ambos
 				if value == letter:
 					decrypted_word += key
 					
@@ -122,7 +122,7 @@ def run():
 			encrypted_message = input('Escribe tu mensaje cifrado: ')
 			decrypted_message = decrypt(encrypted_message)
 			print(decrypted_message)
-        elif command == 's':
+		elif command == 's':
 			print('salir')
 		else:
 			print('¡Comando no encontrado!')
